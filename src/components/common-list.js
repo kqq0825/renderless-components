@@ -1,14 +1,12 @@
 export default {
-  name: "renderless-list",
-  functional: true,
+  name: "common-list",
   props: {
-    title: String,
     value: Array,
   },
-  render(h, context) {
+  render() {
     return (
       <ul>
-        {context.props.value.map((item) => {
+        {this.value.map((item) => {
           return (
             <el-card class="box-card" key={item.text}>
               {/* <img
